@@ -1,0 +1,94 @@
+product_scoping:
+  agent: product_owner
+  description: |
+    CEO request: "{ceo_request}".
+    Produce a product scoping document with:
+    - problem statement
+    - target users
+    - business goals
+    - non-goals
+    - MVP scope and acceptance criteria
+    Save to src/company_ai/artifacts/docs/tech_product_scope.md.
+  expected_output: "A complete product scope markdown document."
+  output_file: "src/company_ai/artifacts/docs/tech_product_scope.md"
+
+ux_flows:
+  agent: ux_designer
+  description: |
+    Based on the product scope, produce UX user flows for the MVP.
+    Include key journeys, failure paths, and user decision points.
+    Save to src/company_ai/artifacts/designs/ux_flows.md.
+  expected_output: "A UX flow markdown document for key journeys."
+  output_file: "src/company_ai/artifacts/designs/ux_flows.md"
+
+ui_specs:
+  agent: ui_designer
+  description: |
+    Produce practical UI specifications from the UX flows.
+    Include screen list, component inventory, and states.
+    Save to src/company_ai/artifacts/designs/ui_specifications.md.
+  expected_output: "A UI specification markdown document."
+  output_file: "src/company_ai/artifacts/designs/ui_specifications.md"
+
+architecture:
+  agent: software_architect
+  description: |
+    Design a software architecture for the requested initiative.
+    Include service boundaries, data model overview, integrations, and security considerations.
+    Save to src/company_ai/artifacts/docs/tech_architecture.md.
+  expected_output: "An architecture markdown document with clear technical decisions."
+  output_file: "src/company_ai/artifacts/docs/tech_architecture.md"
+
+implementation_plan:
+  agent: tech_lead
+  description: |
+    Build a phased implementation plan.
+    Include milestones, dependencies, workstreams, and major risks.
+    Save to src/company_ai/artifacts/docs/tech_implementation_plan.md.
+  expected_output: "A phased implementation plan markdown document."
+  output_file: "src/company_ai/artifacts/docs/tech_implementation_plan.md"
+
+backend_implementation:
+  agent: backend_developer
+  description: |
+    Produce a backend implementation blueprint.
+    Include API endpoints, domain modules, data storage approach, and testing strategy.
+    Save to src/company_ai/artifacts/docs/backend_implementation.md.
+  expected_output: "A backend implementation markdown document."
+  output_file: "src/company_ai/artifacts/docs/backend_implementation.md"
+
+frontend_implementation:
+  agent: frontend_developer
+  description: |
+    Produce a frontend implementation blueprint.
+    Include routing, state model, UI composition, and test approach.
+    Save to src/company_ai/artifacts/docs/frontend_implementation.md.
+  expected_output: "A frontend implementation markdown document."
+  output_file: "src/company_ai/artifacts/docs/frontend_implementation.md"
+
+devops_pipeline_setup:
+  agent: devops_engineer
+  description: |
+    Define a CI/CD and operations baseline.
+    Include build, test, lint, artifact handling, and release gate recommendations.
+    Save to src/company_ai/artifacts/docs/devops_pipeline.md.
+  expected_output: "A DevOps pipeline markdown document."
+  output_file: "src/company_ai/artifacts/docs/devops_pipeline.md"
+
+qa_validation:
+  agent: qa_tester
+  description: |
+    Produce QA validation criteria and test strategy.
+    Include test levels, critical scenarios, and release-blocking conditions.
+    Save to src/company_ai/artifacts/reports/qa_validation_report.md.
+  expected_output: "A QA validation markdown report."
+  output_file: "src/company_ai/artifacts/reports/qa_validation_report.md"
+
+final_technical_review:
+  agent: cto
+  description: |
+    Review all technical artifacts and provide final technical sign-off notes.
+    Include unresolved risks and go/no-go recommendation.
+    Save to src/company_ai/artifacts/reports/final_technical_review.md.
+  expected_output: "A CTO technical review and recommendation report."
+  output_file: "src/company_ai/artifacts/reports/final_technical_review.md"

@@ -1,0 +1,27 @@
+cost_estimation:
+  agent: financial_analyst
+  description: |
+    CEO request: "{ceo_request}".
+    Build a low/base/high cost estimate with key assumptions and cost drivers.
+    Use the cost model stub as baseline input.
+    Save to src/company_ai/artifacts/reports/cost_estimation.md.
+  expected_output: "A structured cost estimation markdown report."
+  output_file: "src/company_ai/artifacts/reports/cost_estimation.md"
+
+budget_controls:
+  agent: cost_controller
+  description: |
+    Define budget control mechanisms for implementation.
+    Include cost checkpoints, approval thresholds, and variance response rules.
+    Save to src/company_ai/artifacts/reports/budget_controls.md.
+  expected_output: "A budget controls markdown report."
+  output_file: "src/company_ai/artifacts/reports/budget_controls.md"
+
+cfo_approval_gate:
+  agent: cfo
+  description: |
+    Provide CFO approval gate decision.
+    Include approved budget envelope, conditional requirements, and release decision.
+    Save to src/company_ai/artifacts/reports/cfo_approval_gate.md.
+  expected_output: "A CFO approval gate decision report."
+  output_file: "src/company_ai/artifacts/reports/cfo_approval_gate.md"

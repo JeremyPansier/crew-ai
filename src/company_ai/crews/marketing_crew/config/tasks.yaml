@@ -1,0 +1,36 @@
+strategy_brief:
+  agent: marketing_strategist
+  description: |
+    CEO request: "{ceo_request}".
+    Create a marketing strategy brief.
+    Include target segments, positioning, core message pillars, and primary channels.
+    Save to src/company_ai/artifacts/docs/marketing_strategy_brief.md.
+  expected_output: "A marketing strategy brief markdown document."
+  output_file: "src/company_ai/artifacts/docs/marketing_strategy_brief.md"
+
+announcement_drafting:
+  agent: copywriter_communications
+  description: |
+    Draft an announcement package for launch communication.
+    Include headline options, summary statement, and key talking points.
+    Save to src/company_ai/artifacts/docs/announcement_draft.md.
+  expected_output: "An announcement draft markdown document."
+  output_file: "src/company_ai/artifacts/docs/announcement_draft.md"
+
+brand_review:
+  agent: brand_communications_reviewer
+  description: |
+    Review announcement content for brand consistency and risky claims.
+    Use the claims check stub and provide suggested wording adjustments.
+    Save to src/company_ai/artifacts/reports/brand_review.md.
+  expected_output: "A brand and communications review markdown report."
+  output_file: "src/company_ai/artifacts/reports/brand_review.md"
+
+cmo_approval_gate:
+  agent: cmo
+  description: |
+    Provide CMO approval gate decision for launch communications.
+    Include approval status, required edits, and final recommendation.
+    Save to src/company_ai/artifacts/reports/cmo_approval_gate.md.
+  expected_output: "A CMO approval gate decision report."
+  output_file: "src/company_ai/artifacts/reports/cmo_approval_gate.md"

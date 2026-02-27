@@ -1,0 +1,36 @@
+compliance_scope_definition:
+  agent: compliance_analyst
+  description: |
+    CEO request: "{ceo_request}".
+    Define compliance scope for the initiative.
+    Include applicable policy domains, control owners, and evidence expectations.
+    Save to src/company_ai/artifacts/docs/compliance_scope.md.
+  expected_output: "A compliance scope markdown document."
+  output_file: "src/company_ai/artifacts/docs/compliance_scope.md"
+
+legal_review:
+  agent: legal_counsel
+  description: |
+    Review initiative materials from a legal perspective.
+    Use the contract review stub where useful and summarize legal risks, obligations, and mitigations.
+    Save to src/company_ai/artifacts/reports/legal_review.md.
+  expected_output: "A legal review markdown report."
+  output_file: "src/company_ai/artifacts/reports/legal_review.md"
+
+compliance_gap_analysis:
+  agent: compliance_analyst
+  description: |
+    Perform a compliance gap analysis against defined scope.
+    Include current state, target state, severity, and remediation owners.
+    Save to src/company_ai/artifacts/reports/compliance_gap_analysis.md.
+  expected_output: "A compliance gap analysis markdown report."
+  output_file: "src/company_ai/artifacts/reports/compliance_gap_analysis.md"
+
+compliance_release_gate:
+  agent: cco
+  description: |
+    Provide compliance release gate decision.
+    Include must-fix items, accepted risks, and a formal approval status.
+    Save to src/company_ai/artifacts/reports/compliance_release_gate.md.
+  expected_output: "A CCO compliance release gate decision report."
+  output_file: "src/company_ai/artifacts/reports/compliance_release_gate.md"

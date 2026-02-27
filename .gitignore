@@ -1,0 +1,43 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated artifacts (keep folder structure via .gitkeep)
+src/company_ai/artifacts/docs/*
+src/company_ai/artifacts/state/*
+src/company_ai/artifacts/reports/*
+src/company_ai/artifacts/designs/*
+!src/company_ai/artifacts/.gitkeep
+!src/company_ai/artifacts/docs/.gitkeep
+!src/company_ai/artifacts/state/.gitkeep
+!src/company_ai/artifacts/reports/.gitkeep
+!src/company_ai/artifacts/designs/.gitkeep
