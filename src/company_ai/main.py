@@ -14,6 +14,7 @@ from company_ai.crews.tech_crew import TechnicalCrew
 
 
 class OrganizationState(BaseModel):
+    id: str = Field(default="organization-flow")
     ceo_request: str = Field(default="")
     technical_output: str = Field(default="")
     finance_output: str = Field(default="")
