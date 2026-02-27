@@ -6,7 +6,7 @@ from typing import Any
 import yaml
 from crewai import Agent, Crew, Process, Task
 
-from company_ai.tools import ComplianceChecklistTool, ContractReviewTool, WriteArtifactTool
+from company_ai.tools import ComplianceChecklistTool, ContractReviewTool, WriteArtifactTool, build_internet_tools
 
 
 class ComplianceCrew:
@@ -26,13 +26,14 @@ class ComplianceCrew:
 
         def mk(name: str, tools: list[Any] | None = None) -> Agent:
             cfg = self.agents_config[name]
+            role_tools = [*build_internet_tools(), *(tools or [])]
             return Agent(
                 role=cfg["role"],
                 goal=cfg["goal"],
                 backstory=cfg["backstory"],
                 allow_delegation=cfg.get("allow_delegation", False),
                 verbose=cfg.get("verbose", False),
-                tools=tools or [],
+                tools=role_tools,
             )
 
         return {

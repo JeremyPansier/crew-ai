@@ -14,7 +14,7 @@ class WriteArtifactInput(BaseModel):
 class WriteArtifactTool(BaseTool):
     name: str = "write_artifact"
     description: str = "Write a text artifact safely under src/company_ai/artifacts/."
-    args_schema = WriteArtifactInput
+    args_schema: type[BaseModel] = WriteArtifactInput
 
     def _artifacts_root(self) -> Path:
         return Path(__file__).resolve().parents[1] / "artifacts"

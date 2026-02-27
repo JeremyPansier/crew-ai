@@ -17,7 +17,7 @@ class ComplianceChecklistInput(BaseModel):
 class ContractReviewTool(BaseTool):
     name: str = "contract_review"
     description: str = "Return a simple legal review placeholder structure."
-    args_schema = ContractReviewInput
+    args_schema: type[BaseModel] = ContractReviewInput
 
     def _run(self, document_summary: str) -> str:
         return json.dumps(
@@ -41,7 +41,7 @@ class ContractReviewTool(BaseTool):
 class ComplianceChecklistTool(BaseTool):
     name: str = "compliance_checklist"
     description: str = "Return a baseline compliance checklist template."
-    args_schema = ComplianceChecklistInput
+    args_schema: type[BaseModel] = ComplianceChecklistInput
 
     def _run(self, product_scope: str) -> str:
         return json.dumps(

@@ -22,7 +22,7 @@ class RepoWriteInput(BaseModel):
 class RepoReadTool(BaseTool):
     name: str = "repo_read"
     description: str = "Read a text file from the repository."
-    args_schema = RepoReadInput
+    args_schema: type[BaseModel] = RepoReadInput
 
     def _run(self, file_path: str) -> str:
         target = (_repo_root() / file_path).resolve()
@@ -34,7 +34,7 @@ class RepoReadTool(BaseTool):
 class RepoWriteTool(BaseTool):
     name: str = "repo_write"
     description: str = "Write a text file in the repository."
-    args_schema = RepoWriteInput
+    args_schema: type[BaseModel] = RepoWriteInput
 
     def _run(self, file_path: str, content: str) -> str:
         # This tool intentionally allows repository writes for scaffolding workflows.

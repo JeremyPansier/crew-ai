@@ -14,7 +14,7 @@ class ClaimsCheckInput(BaseModel):
 class ClaimsCheckTool(BaseTool):
     name: str = "claims_check"
     description: str = "Flag risky marketing wording using simple heuristics."
-    args_schema = ClaimsCheckInput
+    args_schema: type[BaseModel] = ClaimsCheckInput
 
     def _run(self, text: str) -> str:
         risky_patterns = [

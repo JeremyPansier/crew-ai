@@ -13,7 +13,7 @@ class CostModelInput(BaseModel):
 class CostModelTool(BaseTool):
     name: str = "cost_model"
     description: str = "Return a low/base/high cost estimation template."
-    args_schema = CostModelInput
+    args_schema: type[BaseModel] = CostModelInput
 
     def _run(self, initiative: str) -> str:
         return json.dumps(

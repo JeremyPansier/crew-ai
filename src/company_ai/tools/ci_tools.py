@@ -19,7 +19,7 @@ class CommandInput(BaseModel):
 class RunTestsTool(BaseTool):
     name: str = "run_tests"
     description: str = "Run a local test command and return stdout/stderr/exit code."
-    args_schema = CommandInput
+    args_schema: type[BaseModel] = CommandInput
 
     def _run(self, command: str) -> str:
         result = subprocess.run(
@@ -44,7 +44,7 @@ class RunTestsTool(BaseTool):
 class RunLintTool(BaseTool):
     name: str = "run_lint"
     description: str = "Run a local lint command and return stdout/stderr/exit code."
-    args_schema = CommandInput
+    args_schema: type[BaseModel] = CommandInput
 
     def _run(self, command: str) -> str:
         result = subprocess.run(
